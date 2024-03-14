@@ -1,0 +1,93 @@
+@import url('/../inicio/inicio.css');
+@import url('/../faleConosco/faleConosco.css');
+@import url('/../denuncia/denuncia.css');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Configuração global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert-success p {
+    margin: 0;
+}
+
+.titulo {
+  width: 100%;
+  margin-top: 22px;
+  font-size: 36px;
+  font-weight: bold;
+  color: #127CE7;
+  box-shadow: 0px 10px 10px -10px #000000;
+}
+
+/* Header */
+.navegacao {
+  width: 100%;
+  height: 80px;
+  background-color: #127CE7;
+}
+
+.navegacao-navbar {
+  color: white;
+  display: flex;
+  font-size: 19px;
+  max-width: 1028px;
+  justify-content: space-between;
+  margin: auto;
+  padding: 25px 0;
+}
+
+.navegacao-logo img {
+  margin-right: 10px;
+}
+
+.navegacao-lista {
+  list-style: none;
+  display: flex;
+}
+
+.navegacao-lista li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 30px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1028px;
+  margin: auto;
+  margin-top: 0;
+}
+
+/* Footer */
+.rodape {
+  margin-top: 67px;
+  background-color: #127CE7;
+  color: #fff;
+  width: 100%;
+  height: 167px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+}

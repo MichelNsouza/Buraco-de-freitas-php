@@ -1,0 +1,59 @@
+/* Estilo do formulário */
+.formulario {
+  margin: auto;
+  margin-top: 35px;
+  padding: 24px;
+  width: 1024px;
+  height: 597px;
+  border: 1px solid #DADADA;
+  box-shadow: 0px 0px 5px #000000;
+  border-radius: 5px;
+}
+
+.form-grupo-user {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.form-grupo {
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 466px;
+  height: 49px;
+  padding: 5px;
+  margin-top: 3px;
+  font-size: 18px;
+}
+
+textarea {
+  width: 961px;
+  height: 257px;
+  resize: none;
+}
+
+input,
+textarea {
+  border: 0;
+  box-shadow: 0px 0px 5px #000000;
+  border-radius: 5px;
+}
+
+.form-botao {
+  width: 200px;
+  height: 58px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 35px;
+  color: white;
+  background-color: #2E8B02;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  margin-top: 53px;
+  justify-content: center;
+}

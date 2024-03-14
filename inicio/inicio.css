@@ -1,0 +1,115 @@
+/* Estilo banner */
+.banner {
+  color: white;
+  border-radius: 16px;
+  margin: 15px auto 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1024px;
+  height: 300px;
+  background-color: #127de7f1;
+  background-image: url("/../componentes/banner/backg-banner.png");
+}
+
+.banner-titulo {
+  width: 387px;
+  height: 88px;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 76px;
+}
+
+.banner-link {
+  text-align: center;
+  background-color: #004993;
+  width: 343px;
+  height: 58px;
+  border-radius: 35px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 38px;
+  margin-bottom: 40px;
+  color: white;
+  text-decoration: none;
+}
+
+.banner-link img {
+  padding: 5px;
+}
+
+/* Estilo dos registro de denuncia */
+.registros {
+  max-width: 1024px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.registros-denuncia {
+  font-size: 16px;
+  width: calc(33.33% - 33px);
+  height: 322px;
+  text-align: center;
+  margin: 30px 0;
+  box-shadow: 0px 0px 5px #000000;
+  border-radius: 5px;
+}
+
+.registros-denuncia-img {
+  width: 100%;
+  padding: 15px;
+}
+
+.registros-denuncia-endereco {
+  font-weight: bold;
+  color: #127CE7;
+}
+
+.registros-denuncia-periodo {
+  font-weight: bold;
+}
+
+.registros-denuncia-reporte {
+  padding-top: 26px;
+}
+
+/* Estilo da tabela de ranking */
+.ranking {
+  justify-content: space-around;
+  width: 1024px;
+  height: 265px;
+  margin: auto;
+  margin-bottom: 67px;
+}
+
+.ranking-tabela {
+  display: table;
+  width: 100%;
+  margin-top: 35px;
+  height: 265px;
+  box-shadow: 0px 0px 5px #000000;
+  border-radius: 5px;
+  padding: 24px;
+  font-size: 18px;
+}
+
+.ranking-tabela-cabeca-cabecalho-nome,
+.ranking-tabela-corpo-linha-nome {
+  text-align: left;
+}
+
+.ranking-tabela-corpo-linha {
+  display: table-row;
+  text-align: center;
+}
+
+.main-home {
+  margin-bottom: 67px;
+}

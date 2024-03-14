@@ -1,0 +1,53 @@
+/* Estilo do formulário de denúncia */
+  .formulario-denuncia {
+    margin: auto;
+    margin-top: 35px;
+    padding: 24px;
+    width: 1024px;
+    max-height: 769px;
+    border: 1px solid #DADADA;
+    box-shadow: 0px 0px 5px #000000;
+    border-radius: 5px;
+  }
+
+  .form-grupo-denuncia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding: 5px;
+  }
+
+  input[type="file"] {
+    display: none;
+  }
+
+  .imagem-input {
+    display: inline-block;
+    cursor: pointer;
+    width: 961px;
+    height: 226px;
+    border: 4px dotted #999;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .form-botao-denuncia {
+    width: 297px;
+    height: 58px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 35px;
+    color: white;
+    background-color: #2E8B02;
+    background-image: url("/../componentes/denuncia/botao.svg");
+    background-repeat: no-repeat;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    margin: auto;
+    margin-top: 53px;
+    justify-content: center;
+    text-align: center;
+    background-position: 35px center;
+  }

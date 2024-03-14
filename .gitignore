@@ -1,0 +1,17 @@
+# Ignore .replit configuration files
+.replit
+replit.nix
+
+# Ignore Visual Studio Code configuration files
+.vscode/
+
+# Ignore other common files and directories
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+node_modules/
+dist/
+build/
+
