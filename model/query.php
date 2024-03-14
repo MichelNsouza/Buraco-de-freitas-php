@@ -4,7 +4,9 @@ require_once 'conexao.php';
 
 $pdo = Conexao::getConnection();
 
-// Consulta SQL para criar a tabela
+//Consulta SQL para criar a tabela
+
+
 $sql = "CREATE TABLE IF NOT EXISTS denuncias (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -14,6 +16,9 @@ $sql = "CREATE TABLE IF NOT EXISTS denuncias (
     foto VARCHAR(255) NOT NULL
     );
 ";
+
+//apagar
+//$sql = "DROP TABLE  denuncias";
 
 // Tentativa de execução da consulta
 try {
