@@ -1,3 +1,9 @@
+<?php 
+require_once __DIR__.'/../model/conexao.php'; 
+$pdo = Conexao::getConnection();
+$stmt = $pdo->query('SELECT * FROM denuncias');
+$denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
+?>
 <!DOCTYPE html>
 <html>
   
@@ -10,7 +16,11 @@
   
 <body>
   <?php include_once __DIR__."/../componentes/header.php";?>
-  
+  <?php
+  if(isset($_GET['mensagem']) && $_GET['mensagem'] == 'sucesso') {
+      echo '<div class="alert alert-success" role="alert">Denuncia registrada com sucesso!</div>';
+  }
+  ?>
   <main class="main main-home">
 
     <section class="banner">
@@ -27,73 +37,26 @@
     <section class="registros">
       
       <h2 class="titulo">Últimos registros</h2>
-      
-      <article class="registros-denuncia">
-        <img src="/../componentes/registros/padrao-buraco.png" alt="" class="registros-denuncia-img">
-        <p class="registros-denuncia-endereco">Av. Luiz Tarquíneo, 233, Centro</p>
-        <p class="registros-denuncia-referencia">Próximo a Alto Escola ViIas</p>
-        <p class="registros-denuncia-periodo">Registrado há 3 meses</p>
-        <p class="registros-denuncia-reporte">
-          não esta mais lá?
-          <a href="/../faleConosco/index.php">reporte!</a>
-        </p>
-      </article>
 
-      <article class="registros-denuncia">
-        <img src="/../componentes/registros/padrao-buraco.png" alt="" class="registros-denuncia-img">
-        <p class="registros-denuncia-endereco">Av. Luiz Tarquíneo, 233, Centro</p>
-        <p class="registros-denuncia-referencia">Próximo a Alto Escola ViIas</p>
-        <p class="registros-denuncia-periodo">Registrado há 3 meses</p>
-        <p class="registros-denuncia-reporte">
-          não esta mais lá?
-          <a href="/../faleConosco/index.php">reporte!</a>
-        </p>
-      </article>
+      <?php foreach($denuncias as $denuncia): ?>
+        <article class="registros-denuncia">
+            <img src="/../componentes/registros/padrao-buraco.png">
 
-      <article class="registros-denuncia">
-        <img src="/../componentes/registros/padrao-buraco.png" alt="" class="registros-denuncia-img">
-        <p class="registros-denuncia-endereco">Av. Luiz Tarquíneo, 233, Centro</p>
-        <p class="registros-denuncia-referencia">Próximo a Alto Escola ViIas</p>
-        <p class="registros-denuncia-periodo">Registrado há 3 meses</p>
-        <p class="registros-denuncia-reporte">
-          não esta mais lá?
-          <a href="/../faleConosco/index.php">reporte!</a>
-        </p>
-      </article>
-
-      <article class="registros-denuncia">
-        <img src="/../componentes/registros/padrao-buraco.png" alt="" class="registros-denuncia-img">
-        <p class="registros-denuncia-endereco">Av. Luiz Tarquíneo, 233, Centro</p>
-        <p class="registros-denuncia-referencia">Próximo a Alto Escola ViIas</p>
-        <p class="registros-denuncia-periodo">Registrado há 3 meses</p>
-        <p class="registros-denuncia-reporte">
-          não esta mais lá?
-          <a href="/../faleConosco/index.php">reporte!</a>
-        </p>
-      </article>
-
-      <article class="registros-denuncia">
-        <img src="/../componentes/registros/padrao-buraco.png" alt="" class="registros-denuncia-img">
-        <p class="registros-denuncia-endereco">Av. Luiz Tarquíneo, 233, Centro</p>
-        <p class="registros-denuncia-referencia">Próximo a Alto Escola ViIas</p>
-        <p class="registros-denuncia-periodo">Registrado há 3 meses</p>
-        <p class="registros-denuncia-reporte">
-          não esta mais lá?
-          <a href="/../faleConosco/index.php">reporte!</a>
-        </p>
-      </article>
-
-      <article class="registros-denuncia">
-        <img src="/../componentes/registros/padrao-buraco.png" alt="" class="registros-denuncia-img">
-        <p class="registros-denuncia-endereco">Av. Luiz Tarquíneo, 233, Centro</p>
-        <p class="registros-denuncia-referencia">Próximo a Alto Escola ViIas</p>
-        <p class="registros-denuncia-periodo">Registrado há 3 meses</p>
-        <p class="registros-denuncia-reporte">
-          não esta mais lá?
-          <a href="/../faleConosco/index.php">reporte!</a>
-        </p>
-      </article>
-
+            <p class="registros-denuncia-endereco">
+                <?= $denuncia->local ?>
+            </p>
+            <p class="registros-denuncia-referencia">
+                <?= $denuncia->ponto_ref ?>
+            </p>
+            <p class="registros-denuncia-periodo">
+                15:00hr
+                <!--<=? $denuncia->periodo ?>-->
+            </p>
+            <p class="registros-denuncia-reporte">
+                Não está mais lá? <a href="/../faleConosco/index.php">Reporte!</a>
+            </p>
+        </article>
+      <?php endforeach; ?>
     </section>
 
     <section class="ranking">

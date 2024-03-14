@@ -13,54 +13,48 @@
   <?php include_once __DIR__."/../componentes/header.php";?>
 
   <main class="main main-denuncie">
-
-    <?php
-    if(isset($_GET['mensagem']) && $_GET['mensagem'] == 'sucesso') {
-        echo '<div class="alert alert-success" role="alert">Denuncia registrada com sucesso!</div>';
-    }
-    ?>
-    
+  
       <h1 class="titulo">
         Faça sua denuncia
       </h1>
     
     <form action="/model/processar_formulario_denuncia.php" method="post" class="formulario-denuncia" enctype="multipart/form-data">
-
-
+      
       <div class="form-grupo-user">
         <div class="form-grupo">
           <label for="nome">Nome:</label>
           <input type="text" id="nome" name="nome" required>
         </div>
-  
+        
         <div class="form-grupo">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required>
         </div>
       </div>
+      
       <div class="form-grupo-denuncia">
         <div class="form-grupo">
           <label for="local">Local:</label><br>
           <input type="text" id="local" name="local" required>
         </div>
-    
+        
         <div class="form-grupo">
           <label for="ponto_ref">Ponto de referencia:</label><br>
           <input type="text" id="ponto_ref" name="ponto_ref" required>
         </div>
       </div>
+      
       <div class="form-grupo">
         <label class="imagem-input" for="foto">
           Selecione ou arraste uma imagem:
           <input type="file" id="foto" name="foto" accept="image/*">
         </label>
-        <br>
-      </div
-
+      </div>
+      
       <div class="form-grupo">
         <input class="form-botao-denuncia" type="submit" value="Registrar denuncia">
       </div>
-  
+      
     </form>
   </main>
 

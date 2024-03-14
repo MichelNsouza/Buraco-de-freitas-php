@@ -12,10 +12,8 @@
 
   .form-grupo-denuncia {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: auto;
-    padding: 5px;
+    justify-content: space-around;
+    margin: auto
   }
 
   input[type="file"] {

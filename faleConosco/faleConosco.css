@@ -12,8 +12,8 @@
 
 .form-grupo-user {
   display: flex;
-  justify-content: space-between;
-  margin: auto;
+  justify-content: space-around;
+  margin: auto
 }
 
 .form-grupo {
@@ -24,8 +24,6 @@ input[type="text"],
 input[type="email"] {
   width: 466px;
   height: 49px;
-  padding: 5px;
-  margin-top: 3px;
   font-size: 18px;
 }
 
