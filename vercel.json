@@ -5,13 +5,10 @@
     }
   },
   "routes": [
-    { "src": "/admin", "dest": "/admin.php" },
+    { "src": "/src/(.*)", "dest": "/src/$1" },
     { "src": "/css/(.*)", "dest": "/css/$1" },
     { "src": "/img/(.*)", "dest": "/img/$1" },
-    { "src": "/editar-produto.php(.*)", "dest": "/editar-produto.php$1" },
-    { "src": "/excluir-produto.php(.*)", "dest": "/excluir-produto.php$1" },
-    { "src": "/cadastrar-produto.php(.*)", "dest": "/cadastrar-produto.php$1" },
-    { "src": "/gerador-pdf.php(.*)", "dest": "/gerador-pdf.php$1" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/api/(.*)", "dest": "/api/index.php" },
+    { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
