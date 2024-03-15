@@ -5,9 +5,14 @@
     }
   },
   "routes": [
-    { "src": "/(api|css|img|js|uploads|componentes|src)/(.*\.(php|css|js|png|jpg|svg|webp))", "dest": "/$1/$2" },
-    { "src": "/src/view/(denuncia|faleConosco|inicio)/(index.php)", "dest": "/src/view/$1/$2" },
-    { "src": "/src/(controller|model|repositorio)/(.*\.php)", "dest": "/src/$1/$2" },
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/css/(.*)", "dest": "/css/$1" },
+    { "src": "/img/(.*)", "dest": "/img/$1" },
+    { "src": "/js/(.*)", "dest": "/js/$1" },
+    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
+    { "src": "/componentes/(.*)", "dest": "/componentes/$1" },
+    { "src": "/src/view/(denuncia|faleConosco|inicio)/(.*)", "dest": "/src/view/$1/$2" },
+    { "src": "/src/(controller|model|repositorio)/(.+\\.php)", "dest": "/src/$1/$2" },
     { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
