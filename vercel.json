@@ -5,24 +5,9 @@
     }
   },
   "routes": [
-    { "src": "/src/(.*)", "dest": "/src/$1" },
-    { "src": "/css/(.*)", "dest": "/css/$1" },
-    { "src": "/img/(.*)", "dest": "/img/$1" },
-    { "src": "/js/(.*)", "dest": "/js/$1" },
-    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
-    { "src": "/componentes/(.*)", "dest": "/componentes/$1" },
-    { "src": "/src/view/(.*)", "dest": "/src/view/$1" },
-    { "src": "/src/view/denuncia/(.*)", "dest": "/src/view/denuncia/$1" },
-    { "src": "/src/view/faleConosco/(.*)", "dest": "/src/view/faleConosco/$1" },
-    { "src": "/src/view/inicio/(.*)", "dest": "/src/view/inicio/$1" },
-    { "src": "/src/repositorio/(.*)", "dest": "/src/repositorio/$1" },
-    { "src": "/src/model/(.*)", "dest": "/src/model/$1" },
-    { "src": "/src/controller/(.*)", "dest": "/src/controller/$1" },
-    { "src": "/img/banner/(.*)", "dest": "/img/banner/$1" },
-    { "src": "/img/denuncia/(.*)", "dest": "/img/denuncia/$1" },
-    { "src": "/img/nav/(.*)", "dest": "/img/nav/$1" },
-    { "src": "/img/ranking/(.*)", "dest": "/img/ranking/$1" },
-    { "src": "/img/registros/(.*)", "dest": "/img/registros/$1" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/(api|css|img|js|uploads|componentes|src)/(.*\.(php|css|js|png|jpg|svg|webp))", "dest": "/$1/$2" },
+    { "src": "/src/view/(denuncia|faleConosco|inicio)/(index.php)", "dest": "/src/view/$1/$2" },
+    { "src": "/src/(controller|model|repositorio)/(.*\.php)", "dest": "/src/$1/$2" },
+    { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
