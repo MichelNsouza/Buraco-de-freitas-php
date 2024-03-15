@@ -1,5 +1,6 @@
-<?php 
-require_once __DIR__.'/../model/conexao.php'; 
+<?php
+require_once(__DIR__ . "/../../repositorio/conexao.php");
+
 $pdo = Conexao::getConnection();
 $stmt = $pdo->query('SELECT * FROM denuncias');
 $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -11,11 +12,12 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Buraco de Freitas</title>
-  <link href="/../componentes/global.css" rel="stylesheet" type="text/css"/>
+  <link href="/../css/global.css" rel="stylesheet" type="text/css"/>
 </head>
   
 <body>
-  <?php include_once __DIR__."/../componentes/header.php";?>
+  <?php include_once __DIR__ ."/../../../componentes/header.php";?>
+  
   <?php
   if(isset($_GET['mensagem']) && $_GET['mensagem'] == 'sucesso') {
       echo '<div class="alert alert-success" role="alert">Denuncia registrada com sucesso!</div>';
@@ -27,7 +29,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
 
       <h1 class="banner-titulo">Encontrou um buraco em Lauro de Freitas?</h1>
 
-      <a href="/../denuncia/index.php" class="banner-link">
+      <a href="/../../../src/view/denuncia/index.php" class="banner-link">
         <img src="/../componentes/banner/icone-banner.svg" class="#" />
         Denuncie agora mesmo!
       </a>
@@ -114,7 +116,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
 
   </main>
 
-  <?php include_once __DIR__."/../componentes/footer.php";?>
+  <?php include_once __DIR__."/../../../componentes/footer.php";?>
 
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 require_once 'conexao.php';
 
-$pdo = Conexao::getConnection();
+$pdo = Conexao::getConnection();,
 
 //Consulta SQL para criar a tabela
 

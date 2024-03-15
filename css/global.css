@@ -1,6 +1,6 @@
-@import url('/../inicio/inicio.css');
-@import url('/../faleConosco/faleConosco.css');
-@import url('/../denuncia/denuncia.css');
+@import url('/css/inicio.css');
+@import url('/css/faleConosco.css');
+@import url('/css/denuncia.css');
 @import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Configuração global */

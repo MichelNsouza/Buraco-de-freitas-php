@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Fale Conosco</title>
-  <link href="/../componentes/global.css" rel="stylesheet" type="text/css"/>
+  <link href="/../css/global.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
 
-  <?php include_once __DIR__."/../componentes/header.php";?>
+  <?php include_once __DIR__ ."/../../../componentes/header.php";?>
 
   <main class="main main-faleConosco">
     
@@ -45,7 +45,7 @@
 
   </main>
 
-  <?php include_once __DIR__."/../componentes/footer.php";?>
+   <?php include_once __DIR__."/../../../componentes/footer.php";?>
 
 </body>
 </html>
