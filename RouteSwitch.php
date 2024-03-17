@@ -2,6 +2,7 @@
 
 abstract class RouteSwitch
 {
+  
     protected function inicio()
     {
         require __DIR__ . '/src/view/inicio/index.php';
