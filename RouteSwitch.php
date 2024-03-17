@@ -17,7 +17,7 @@ abstract class RouteSwitch
         require __DIR__ . '/src/view/denuncia/index.php';
     }
 
-    protected function __call($name, $arguments)
+    public function __call($name, $arguments)
     {
         http_response_code(404);
         require __DIR__ . '/src/view/faleConosco/index.php';
