@@ -2,9 +2,9 @@
   <nav class="navegacao-navbar">
 
     <div class="navegacao-logo">
-      <img src="/../../../img/nav/home.svg"/>
-      <p>Buraco de Freitas</p>
-    </div>    
+      <p> <img src="/../../../img/nav/home.svg"/> Buraco de Freitas</p>
+    </div>
+
     <ul class="navegacao-lista">
 
       <li class="navegacao-lista-item">
@@ -20,5 +20,6 @@
       </li>
 
     </ul>
+
   </nav>
 </header>

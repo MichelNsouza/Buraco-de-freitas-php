@@ -6,7 +6,7 @@ $stmt = $pdo->query('SELECT * FROM denuncias');
 $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="pt">
   
 <head>
   <meta charset="utf-8">
@@ -23,7 +23,8 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
       echo '<div class="alert alert-success" role="alert">Denuncia registrada com sucesso!</div>';
   }
   ?>
-  <main class="main main-home">
+
+  <main class="main">
 
     <section class="banner">
 
@@ -42,6 +43,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
 
       <?php foreach($denuncias as $denuncia): ?>
         <article class="registros-denuncia">
+
             <img src="/../../../img/registros/padrao-buraco.png">
 
             <p class="registros-denuncia-endereco">

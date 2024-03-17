@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt">
 
 <head>
   <meta charset="utf-8">
@@ -12,7 +12,7 @@
 
   <?php include_once __DIR__ ."/../../../componentes/header.php";?>
 
-  <main class="main main-denuncie">
+  <main class="main">
   
       <h1 class="titulo">
         Faça sua denuncia
