@@ -1,77 +1,51 @@
 <?php
+
 class Denuncia
 {
     private ?int $id;
-    private string $tipo;
     private string $nome;
-    private string $descricao;
+    private string $email;
+    private string $local;
+    private string $ponto_ref;
+    private string $foto;
 
-    private string $imagem;
-    private float $preco;
-
-    public function __construct(?int $id, string $tipo, string $nome, string $descricao,  float $preco, string $imagem = "logo-serenatto.png")
+    public function __construct(?int $id, string $nome, string $email, string $local, string $ponto_ref, string $foto)
     {
         $this->id = $id;
-        $this->tipo = $tipo;
         $this->nome = $nome;
-        $this->descricao = $descricao;
-        $this->imagem = $imagem;
-        $this->preco = $preco;
+        $this->email = $email;
+        $this->local = $local;
+        $this->ponto_ref = $ponto_ref;
+        $this->foto = $foto;
     }
 
-    public function getId(): int
+    public function getId(): ?int
     {
         return $this->id;
     }
-
-
-    public function setImagem(string $imagem): void
-    {
-        $this->imagem = $imagem;
-    }
-
-
-
-    public function getTipo(): string
-    {
-        return $this->tipo;
-    }
-
 
     public function getNome(): string
     {
         return $this->nome;
     }
 
-
-    public function getDescricao(): string
+    public function getEmail(): string
     {
-        return $this->descricao;
+        return $this->email;
     }
 
-
-
-    public function getImagem(): string
+    public function getLocal(): string
     {
-        return $this->imagem;
+        return $this->local;
     }
 
-    public function getImagemDiretorio(): string
+    public function getPontoRef(): string
     {
-        return "img/".$this->imagem;
+        return $this->ponto_ref;
     }
 
-    public function getPreco(): float
+    public function getFoto(): string
     {
-        return $this->preco;
+        return $this->foto;
     }
-
-    public function getPrecoFormatado():string
-    {
-        return "R$ " . number_format($this->preco, 2);
-    }
-
-
-
-
 }
