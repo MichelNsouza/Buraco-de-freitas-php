@@ -1,6 +1,8 @@
-
 <?php
-
+if ($_SERVER['REQUEST_URI'] === '/') {
+    header('Location: /inicio');
+    exit();
+}
 require_once __DIR__ . '/RouteSwitch.php';
 
 class Router extends RouteSwitch
