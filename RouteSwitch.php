@@ -1,8 +1,16 @@
 <?php
 
+// Verifica se a URL atual é a raiz do site
+if ($_SERVER['REQUEST_URI'] === '/') {
+    // Redireciona para a página inicial
+    header('Location: /inicio');
+    exit();
+}
+
+// Se a URL não for a raiz, continua o roteamento normal
+
 abstract class RouteSwitch
 {
-  
     protected function inicio()
     {
         require __DIR__ . '/src/view/inicio/index.php';
