@@ -82,7 +82,9 @@ class DenunciaController
         $statement->execute();
     }
 
+  dd(
   public function processaFormularioDenuncia(){
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $nome = $_POST['nome'];
@@ -91,7 +93,7 @@ class DenunciaController
         $ponto_ref = $_POST['ponto_ref'];
 
         if ($_FILES['foto']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['foto']['tmp_name'])) {
-            $uploadDir =  __DIR__.'/../uploads/';
+            $uploadDir =  '/../../uploads/';
             $uploadFile = $uploadDir . basename($_FILES['foto']['name']);
 
             if (move_uploaded_file($_FILES['foto']['tmp_name'], $uploadFile)) {
@@ -121,4 +123,5 @@ class DenunciaController
     }
   }
 }
+);
 ?>

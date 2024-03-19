@@ -18,7 +18,7 @@
         Faça sua denuncia
       </h1>
     
-    <form action="/model/processar_formulario_denuncia.php" method="post" class="formulario-denuncia" enctype="multipart/form-data">
+    <form id="form-denuncia" method="post" class="formulario-denuncia" enctype="multipart/form-data">
       
       <div class="form-grupo-user">
         <div class="form-grupo">
@@ -59,6 +59,41 @@
   </main>
 
    <?php include_once __DIR__."/../../../componentes/footer.php";?>
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function(){
+      $('#formulario-denuncia').submit(function(e){
+          e.preventDefault(); // Impede o envio padrão do formulário
 
+          $.ajax({
+              type: 'post',
+              url: '/../../controller/DenunciaController.php', // O caminho para o arquivo PHP
+              data: { action: 'processaFormularioDenuncia', formData: new FormData(this) },
+              contentType: false,
+              processData: false,
+              success: function(response) {
+                  // Código para tratar a resposta do servidor
+                  alert('Formulário enviado com sucesso!');
+              },
+              error: function() {
+                  alert('Erro ao enviar o formulário.');
+              }
+          });
+      });
+  });
+
+
+</script>
+  <?php
+  require_once  __DIR__."/../../controller/DenunciaController.php";
+  
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+      if ($_POST['action'] == 'processaFormularioDenuncia') {
+          // Chama a função dentro do DenunciaController
+          DenunciaController::processaFormularioDenuncia($_POST['formData']);
+      }
+  }
+  ?>
 </body>
 </html>

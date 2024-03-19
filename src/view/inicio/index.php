@@ -45,7 +45,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
         <article class="registros-denuncia">
 
             <img src="/../../../img/registros/padrao-buraco.png">
-
+            <!--<=? <img src="/../../../upload/$denuncia->foto">?>-->
             <p class="registros-denuncia-endereco">
                 <?= $denuncia->local ?>
             </p>
