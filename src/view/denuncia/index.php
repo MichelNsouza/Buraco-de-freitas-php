@@ -52,6 +52,7 @@
       </div>
       
       <div class="form-grupo">
+        <input type="hidden" name="action" value="processar_denuncia">
         <input class="form-botao-denuncia" type="submit" value="Registrar denuncia">
       </div>
       
@@ -62,38 +63,25 @@
   
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-  $(document).ready(function(){
-      $('#formulario-denuncia').submit(function(e){
-          e.preventDefault(); // Impede o envio padrão do formulário
+      document.getElementById("form-denuncia").addEventListener("submit", function(event) {
+          event.preventDefault(); // Previne o comportamento padrão do formulário
 
+          // Aqui você pode fazer uma requisição AJAX para chamar a função PHP
+          // Exemplo com jQuery
           $.ajax({
-              type: 'post',
-              url: '/../../controller/DenunciaController.php', // O caminho para o arquivo PHP
-              data: { action: 'processaFormularioDenuncia', formData: new FormData(this) },
-              contentType: false,
-              processData: false,
+              url: "src/controller/DenunciaController.php", // Caminho para o arquivo PHP
+              type: "POST",
+              data: $(this).serialize(), // Dados do formulário
               success: function(response) {
-                  // Código para tratar a resposta do servidor
-                  alert('Formulário enviado com sucesso!');
+                  // Sucesso, faça algo com a resposta se necessário
+                  console.log(response);
               },
-              error: function() {
-                  alert('Erro ao enviar o formulário.');
+              error: function(xhr, status, error) {
+                  // Ocorreu um erro, trate-o conforme necessário
+                  console.error(xhr.responseText);
               }
           });
       });
-  });
-
-
 </script>
-  <?php
-  require_once  __DIR__."/../../controller/DenunciaController.php";
-  
-  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-      if ($_POST['action'] == 'processaFormularioDenuncia') {
-          // Chama a função dentro do DenunciaController
-          DenunciaController::processaFormularioDenuncia($_POST['formData']);
-      }
-  }
-  ?>
 </body>
 </html>
