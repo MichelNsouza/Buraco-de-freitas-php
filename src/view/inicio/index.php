@@ -12,7 +12,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Buraco de Freitas</title>
-  <link href="/public/css/global.css" rel="stylesheet" type="text/css"/>
+  <link href="public/css/global.css" rel="stylesheet" type="text/css"/>
 </head>
   
 <body>
