@@ -12,7 +12,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Buraco de Freitas</title>
-  <link href="/../css/global.css" rel="stylesheet" type="text/css"/>
+  <link href="/../public/css/global.css" rel="stylesheet" type="text/css"/>
 </head>
   
 <body>
@@ -30,8 +30,8 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
 
       <h1 class="banner-titulo">Encontrou um buraco em Lauro de Freitas?</h1>
 
-      <a href="/../../../src/view/denuncia/index.php" class="banner-link">
-        <img src="/../../../img/banner/icone-banner.svg" class="#" />
+      <a href="/denuncia" class="banner-link">
+        <img src="/../../../public/img/banner/icone-banner.svg" class="#" />
         Denuncie agora mesmo!
       </a>
 
@@ -44,7 +44,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
       <?php foreach($denuncias as $denuncia): ?>
         <article class="registros-denuncia">
 
-            <img src="/../../../img/registros/padrao-buraco.png">
+            <img src="/../../../public/img/registros/padrao-buraco.png">
             <!--<=? <img src="/../../../upload/$denuncia->foto">?>-->
             <p class="registros-denuncia-endereco">
                 <?= $denuncia->local ?>
@@ -57,7 +57,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
                 <!--<=? $denuncia->periodo ?>-->
             </p>
             <p class="registros-denuncia-reporte">
-                Não está mais lá? <a href="/../faleConosco/index.php">Reporte!</a>
+                Não está mais lá? <a href="/contato">Reporte!</a>
             </p>
         </article>
       <?php endforeach; ?>
@@ -91,7 +91,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
             <td class="ranking-tabela-corpo-linha-nome"><b>João Joaquim Silva e Santos</b></td>
             <td class="ranking-tabela-corpo-linha-posicao">722</td>
             <td class="ranking-tabela-corpo-linha-icone">
-              <img src="/../../../img/ranking/ouro.svg">
+              <img src="/../../../public/img/ranking/ouro.svg">
             </td>
           </tr>
 
@@ -99,7 +99,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
             <td class="ranking-tabela-corpo-linha-nome"><b>João Joaquim Silva e Santos</b></td>
             <td class="ranking-tabela-corpo-linha-posicao">722</td>
             <td class="ranking-tabela-corpo-linha-icone">
-              <img src="/../../../img/ranking/prata.svg">
+              <img src="/../../../public/img/ranking/prata.svg">
             </td>
           </tr>
 
@@ -107,7 +107,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
             <td class="ranking-tabela-corpo-linha-nome"><b>João Joaquim Silva e Santos</b></td>
             <td class="ranking-tabela-corpo-linha-posicao">722</td>
             <td class="ranking-tabela-corpo-linha-icone">
-              <img src="/../../../img/ranking/bronze.svg">
+              <img src="/../../../public/img/ranking/bronze.svg">
             </td>
           </tr>
            

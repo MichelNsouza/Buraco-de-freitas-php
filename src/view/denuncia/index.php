@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Denuncie um buraco</title>
-  <link href="/../css/global.css" rel="stylesheet" type="text/css"/>
+  <link href="public//../css/global.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>
