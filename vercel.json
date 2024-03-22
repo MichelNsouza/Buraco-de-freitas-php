@@ -15,7 +15,7 @@
     { "src": "/src/repositorio/(.*)", "dest": "/src/repositorio/$1" },
     { "src": "/src/model/(.*)", "dest": "/src/model/$1" },
     { "src": "/src/controller/(.*)", "dest": "/src/controller/$1" },
-    { "src": "/public/(.*)", "dest": "/public/$1" }, // Rota para servir arquivos estáticos diretamente
-    { "src": "/(.*)", "dest": "/public/api/index.php" } // Rota padrão para API
+    { "src": "/public/(.*)", "dest": "/public/$1" }, 
+    { "src": "/(.*)", "dest": "/public/api/index.php" } /
   ]
 }
