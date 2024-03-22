@@ -15,7 +15,8 @@
     { "src": "/src/repositorio/(.*)", "dest": "/src/repositorio/$1" },
     { "src": "/src/model/(.*)", "dest": "/src/model/$1" },
     { "src": "/src/controller/(.*)", "dest": "/src/controller/$1" },
-    { "src": "/public/index.php", "dest": "/public/index.php" }, // Rota para index.php dentro de /public
-    { "src": "/(.*)", "dest": "/public/index.php" } // Rota padrão para qualquer outra requisição
+    { "src": "/public/index.php", "dest": "/public/index.php" },
+    { "src": "/api/(.*)", "dest": "/api/index.php" },
+    { "src": "/(.*)", "dest": "/public/index.php" } 
   ]
 }
