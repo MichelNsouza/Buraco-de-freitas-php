@@ -15,11 +15,7 @@
     { "src": "/src/repositorio/(.*)", "dest": "/src/repositorio/$1" },
     { "src": "/src/model/(.*)", "dest": "/src/model/$1" },
     { "src": "/src/controller/(.*)", "dest": "/src/controller/$1" },
-    { "src": "/public/img/banner/(.*)", "dest": "/public/img/banner/$1" },
-    { "src": "/public/img/denuncia/(.*)", "dest": "/public/img/denuncia/$1" },
-    { "src": "/public/img/nav/(.*)", "dest": "/public/img/nav/$1" },
-    { "src": "/public/img/ranking/(.*)", "dest": "/public/img/ranking/$1" },
-    { "src": "/public/img/registros/(.*)", "dest": "/public/img/registros/$1" },
+    { "src": "/public/(.*)", "dest": "/public/$1" },
     { "src": "/(.*)", "dest": "/public/api/index.php" }
   ]
 }
