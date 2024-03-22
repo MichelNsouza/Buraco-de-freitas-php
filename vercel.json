@@ -17,6 +17,7 @@
     { "src": "/src/controller/(.*)", "dest": "/src/controller/$1" },
     { "src": "/public/render.php", "dest": "/public/render.php" },
     { "src": "/api/(.*)", "dest": "/api/index.php" },
-    { "src": "/(.*)", "dest": "/public/render.php" } 
+    { "src": "/(.*)", "dest": "/public/render.php" },
+    { "src": "/(.*)", "dest": "/index.php" } 
   ]
 }
