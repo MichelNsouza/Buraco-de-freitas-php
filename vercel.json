@@ -15,8 +15,8 @@
     { "src": "/src/repositorio/(.*)", "dest": "/src/repositorio/$1" },
     { "src": "/src/model/(.*)", "dest": "/src/model/$1" },
     { "src": "/src/controller/(.*)", "dest": "/src/controller/$1" },
-    { "src": "/public/index.php", "dest": "/public/index.php" },
+    { "src": "/public/render.php", "dest": "/public/render.php" },
     { "src": "/api/(.*)", "dest": "/api/index.php" },
-    { "src": "/(.*)", "dest": "/public/index.php" } 
+    { "src": "/(.*)", "dest": "/public/render.php" } 
   ]
 }
