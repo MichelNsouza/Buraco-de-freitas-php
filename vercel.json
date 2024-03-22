@@ -1,4 +1,3 @@
-
 {
   "functions": {
     "api/*.php": {
@@ -6,22 +5,21 @@
     }
   },
   "routes": [
-    { "src": "/src/(.*)", "dest": "/src/$1" },
-    { "src": "/css/(.*)", "dest": "/css/$1" },
-    { "src": "/img/(.*)", "dest": "/img/$1" },
-    { "src": "/js/(.*)", "dest": "/js/$1" },
-    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
-    { "src": "/componentes/(.*)", "dest": "/componentes/$1" },
+    { "src": "/public/src/(.*)", "dest": "/src/$1" },
+    { "src": "/public/css/(.*)", "dest": "/public/css/$1" },
+    { "src": "/public/img/(.*)", "dest": "/public/img/$1" },
+    { "src": "/public/js/(.*)", "dest": "/public/js/$1" },
+    { "src": "/public/uploads/(.*)", "dest": "/public/uploads/$1" },
+    { "src": "/public/componentes/(.*)", "dest": "/public/componentes/$1" },
     { "src": "/src/view/(.*)", "dest": "/src/view/$1" },
-    
     { "src": "/src/repositorio/(.*)", "dest": "/src/repositorio/$1" },
     { "src": "/src/model/(.*)", "dest": "/src/model/$1" },
     { "src": "/src/controller/(.*)", "dest": "/src/controller/$1" },
-    { "src": "/img/banner/(.*)", "dest": "/img/banner/$1" },
-    { "src": "/img/denuncia/(.*)", "dest": "/img/denuncia/$1" },
-    { "src": "/img/nav/(.*)", "dest": "/img/nav/$1" },
-    { "src": "/img/ranking/(.*)", "dest": "/img/ranking/$1" },
-    { "src": "/img/registros/(.*)", "dest": "/img/registros/$1" },
-    { "src": "/(.*)", "dest": "/api/index.php" }
+    { "src": "/public/img/banner/(.*)", "dest": "/public/img/banner/$1" },
+    { "src": "/public/img/denuncia/(.*)", "dest": "/public/img/denuncia/$1" },
+    { "src": "/public/img/nav/(.*)", "dest": "/public/img/nav/$1" },
+    { "src": "/public/img/ranking/(.*)", "dest": "/public/img/ranking/$1" },
+    { "src": "/public/img/registros/(.*)", "dest": "/public/img/registros/$1" },
+    { "src": "/(.*)", "dest": "/public/api/index.php" }
   ]
 }
