@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Fale Conosco</title>
-  <link href="/../public/css/global.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/global.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body>

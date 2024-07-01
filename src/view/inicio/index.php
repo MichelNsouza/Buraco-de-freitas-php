@@ -31,7 +31,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
       <h1 class="banner-titulo">Encontrou um buraco em Lauro de Freitas?</h1>
 
       <a href="/denuncia" class="banner-link">
-        <img src="/../../../public/img/banner/icone-banner.svg" class="#" />
+        <img src="/img/banner/icone-banner.svg" class="#" />
         Denuncie agora mesmo!
       </a>
 
@@ -44,7 +44,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
       <?php foreach($denuncias as $denuncia): ?>
         <article class="registros-denuncia">
 
-            <img src="/../../../public/uploads/<?=$denuncia->foto?>" class="registros-denuncia-img">
+            <img src="/uploads/<?=$denuncia->foto?>" class="registros-denuncia-img">
             <p class="registros-denuncia-endereco">
                 <?= $denuncia->local ?>
             </p>
@@ -89,7 +89,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
             <td class="ranking-tabela-corpo-linha-nome"><b>João Joaquim Silva e Santos</b></td>
             <td class="ranking-tabela-corpo-linha-posicao">722</td>
             <td class="ranking-tabela-corpo-linha-icone">
-              <img src="/../../../public/img/ranking/ouro.svg">
+              <img src="/img/ranking/ouro.svg">
             </td>
           </tr>
 
@@ -97,7 +97,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
             <td class="ranking-tabela-corpo-linha-nome"><b>João Joaquim Silva e Santos</b></td>
             <td class="ranking-tabela-corpo-linha-posicao">722</td>
             <td class="ranking-tabela-corpo-linha-icone">
-              <img src="/../../../public/img/ranking/prata.svg">
+              <img src="/public/img/ranking/prata.svg">
             </td>
           </tr>
 
@@ -105,7 +105,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
             <td class="ranking-tabela-corpo-linha-nome"><b>João Joaquim Silva e Santos</b></td>
             <td class="ranking-tabela-corpo-linha-posicao">722</td>
             <td class="ranking-tabela-corpo-linha-icone">
-              <img src="/../../../public/img/ranking/bronze.svg">
+              <img src="/public/img/ranking/bronze.svg">
             </td>
           </tr>
            
