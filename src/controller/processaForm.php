@@ -8,7 +8,7 @@ function processaFormularioDenuncia() {
     $ponto_ref = $_POST['ponto_ref'];
 
     if ($_FILES['foto']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['foto']['tmp_name'])) {
-        $uploadDir = './uploads/';
+        $uploadDir = '/tmp/uploads/';
         $uploadFile = $uploadDir . basename($_FILES['foto']['name']);
 
         if (!is_dir($uploadDir)) {
