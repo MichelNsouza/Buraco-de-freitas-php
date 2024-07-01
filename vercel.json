@@ -1,23 +1,17 @@
 {
-  "functions": {
-    "api/*.php": {
-      "runtime": "vercel-php@0.7.0"
-    }
-  },
+  "version": 2,
+  "builds": [
+      { "src": "/api/index.php", "use": "vercel-php@0.6.0" },
+      { "src": "/public/**", "use": "@vercel/static" }
+  ],
   "routes": [
-    { "src": "/public/src/(.*)", "dest": "/src/$1" },
-    { "src": "/public/css/(.*)", "dest": "/public/css/$1" },
-    { "src": "/public/img/(.*)", "dest": "/public/img/$1" },
-    { "src": "/public/js/(.*)", "dest": "/public/js/$1" },
-    { "src": "/public/uploads/(.*)", "dest": "/public/uploads/$1" },
-    { "src": "/public/componentes/(.*)", "dest": "/public/componentes/$1" },
-    { "src": "/src/view/(.*)", "dest": "/src/view/$1" },
-    { "src": "/src/repositorio/(.*)", "dest": "/src/repositorio/$1" },
-    { "src": "/src/model/(.*)", "dest": "/src/model/$1" },
-    { "src": "/src/controller/(.*)", "dest": "/src/controller/$1" },
-    { "src": "/public/app.php", "dest": "/public/app.php" },
-    { "src": "/api/(.*)", "dest": "/api/index.php" },
-    { "src": "/(.*)", "dest": "/public/app.php" },
-    { "src": "/(.*)", "dest": "/index.php" } 
+      {
+          "src": "/(css|js|images)/(.*)",
+          "dest": "public/$1/$2"
+      },
+      {
+          "src": "/(.*)",
+          "dest": "/api/index.php"
+      }
   ]
 }
