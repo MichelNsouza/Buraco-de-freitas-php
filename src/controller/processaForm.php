@@ -1,5 +1,5 @@
 <?php 
-include_once "src/repositorio/conexao.php";
+include_once __DIR__ . "/../repositorio/conexao.php";
 
 function processaFormularioDenuncia() {
     $nome = $_POST['nome'];
