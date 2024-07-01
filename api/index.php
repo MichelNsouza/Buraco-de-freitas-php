@@ -1,4 +1,2 @@
 <?php
-require_once 'index.php';
-
-echo 'teste1';
+require_once __DIR__ . '/app.php';
