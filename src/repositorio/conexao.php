@@ -1,8 +1,8 @@
 <?php
 class Conexao {
-  private static $dsn = "pgsql:host=dpg-cnnfcngl6cac73fg33j0-a.oregon-postgres.render.com;dbname=michelsouza";
-  private static $username = "michelsouza_user";
-  private static $password = "AlGPO6NMfK8dT9mfZfiZFTFVc3NE5tRX";
+  private static $dsn = "mysql:host=mysql.freehostia.com;dbname=micsou5_micsou5";
+  private static $username = "micsou5_micsou5";
+  private static $password = "548098";
     private static $pdo;
 
     public static function getConnection() {

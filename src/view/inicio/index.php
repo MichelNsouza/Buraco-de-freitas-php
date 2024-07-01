@@ -44,8 +44,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
       <?php foreach($denuncias as $denuncia): ?>
         <article class="registros-denuncia">
 
-            <img src="/../../../public/img/registros/padrao-buraco.png">
-            <!--<=? <img src="/../../../upload/$denuncia->foto">?>-->
+            <img src="/../../../public/uploads/<?=$denuncia->foto?>" class="registros-denuncia-img">
             <p class="registros-denuncia-endereco">
                 <?= $denuncia->local ?>
             </p>
@@ -53,8 +52,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
                 <?= $denuncia->ponto_ref ?>
             </p>
             <p class="registros-denuncia-periodo">
-                15:00hr
-                <!--<=? $denuncia->periodo ?>-->
+                <?= $denuncia->data_hora ?>
             </p>
             <p class="registros-denuncia-reporte">
                 Não está mais lá? <a href="/contato">Reporte!</a>

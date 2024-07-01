@@ -16,7 +16,7 @@
       </li>
 
       <li class="navegacao-lista-item">
-        <a href="/faleConosco" class="navegacao-lista-item-link">  <img src="/../../../public/img/nav/contato.svg"/> Contato</a>
+        <a href="/contato" class="navegacao-lista-item-link">  <img src="/../../../public/img/nav/contato.svg"/> Contato</a>
       </li>
 
     </ul>

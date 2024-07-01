@@ -1,4 +1,4 @@
 <?php
 
-require_once __DIR__ . '/public/render.php';
+require_once __DIR__ . '/public/app.php';
 
