@@ -97,7 +97,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
             <td class="ranking-tabela-corpo-linha-nome"><b>João Joaquim Silva e Santos</b></td>
             <td class="ranking-tabela-corpo-linha-posicao">722</td>
             <td class="ranking-tabela-corpo-linha-icone">
-              <img src="/public/img/ranking/prata.svg">
+              <img src="/img/ranking/prata.svg">
             </td>
           </tr>
 
@@ -105,7 +105,7 @@ $denuncias = $stmt->fetchAll(PDO::FETCH_OBJ);
             <td class="ranking-tabela-corpo-linha-nome"><b>João Joaquim Silva e Santos</b></td>
             <td class="ranking-tabela-corpo-linha-posicao">722</td>
             <td class="ranking-tabela-corpo-linha-icone">
-              <img src="/public/img/ranking/bronze.svg">
+              <img src="/img/ranking/bronze.svg">
             </td>
           </tr>
            
