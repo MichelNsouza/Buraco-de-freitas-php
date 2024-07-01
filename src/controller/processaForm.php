@@ -25,9 +25,12 @@ function processaFormularioDenuncia() {
                 $stmt->bindParam(':email', $email);
                 $stmt->bindParam(':local', $local);
                 $stmt->bindParam(':ponto_ref', $ponto_ref);
-                $stmt->bindParam(':foto', basename($_FILES['foto']['name'])); // Salva apenas o nome do arquivo no banco de dados
+
+                $foto = basename($_FILES['foto']['name']); // Corrige o erro de referência
+                $stmt->bindParam(':foto', $foto); // Passa a variável em vez da expressão
                 $stmt->execute();
 
+                // Certifica-se de que não houve saída antes desta linha
                 header("Location: /inicio");
                 exit;
             } else {
@@ -42,6 +45,8 @@ function processaFormularioDenuncia() {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'processar_denuncia') {
+    ob_start(); // Inicia o buffer de saída
     processaFormularioDenuncia();
+    ob_end_flush(); // Envia o conteúdo do buffer de saída (se houver)
 }
 ?>
