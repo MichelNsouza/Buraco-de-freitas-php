@@ -9,7 +9,12 @@ function processaFormularioDenuncia() {
 
     if ($_FILES['foto']['error'] == UPLOAD_ERR_OK && is_uploaded_file($_FILES['foto']['tmp_name'])) {
         $uploadDir = __DIR__ . '/../../public/uploads/';
-        $uploadFile = basename($_FILES['foto']['name']);
+        $uploadFile = $uploadDir . basename($_FILES['foto']['name']);
+
+        // Verifica se o diretório de upload existe, caso contrário, cria-o
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
 
         $check = getimagesize($_FILES['foto']['tmp_name']);
         if ($check !== false) {
@@ -21,7 +26,7 @@ function processaFormularioDenuncia() {
                 $stmt->bindParam(':email', $email);
                 $stmt->bindParam(':local', $local);
                 $stmt->bindParam(':ponto_ref', $ponto_ref);
-                $stmt->bindParam(':foto', $uploadFile);
+                $stmt->bindParam(':foto', basename($_FILES['foto']['name'])); // Salva apenas o nome do arquivo no banco de dados
                 $stmt->execute();
 
                 header("Location: /inicio");
